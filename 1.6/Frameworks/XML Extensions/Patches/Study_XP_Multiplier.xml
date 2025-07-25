@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.SimpleEducation</modId>
+		<key>FSFStudyXPOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<!-- Option is nested so patch isn't always run -->
+	
+	<Operation Class="XmlExtensions.UseSettings">
+		<modId>FrozenSnowFox.SimpleEducation</modId>
+		<keys>
+			<li>FSFStudyXPMulti</li>
+		</keys>
+		<defaultValues>
+			<li>1.0</li>
+		</defaultValues>
+		<apply>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+	<!-- Study XP Multiplier -->
+		
+ 		<li Class="PatchOperationReplace">
+			<xpath>/Defs/RecipeDef[@Name = "FSFSimpleEducationBase"]/workSkillLearnFactor</xpath>
+			<value>
+				<workSkillLearnFactor>{FSFStudyXPMulti}</workSkillLearnFactor>
+			</value>
+		</li>
+				
+			</operations>
+		</Operation>
+			
+		</apply>
+	</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

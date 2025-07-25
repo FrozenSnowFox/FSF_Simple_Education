@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<loadFolders>
+	
+	<v1.5>	
+
+		<!-- Ludeon -->
+		
+		<!-- Core -->
+		
+		<li>/</li>
+		<li>1.5/Ludeon/Core</li>
+		
+		
+		
+		<!-- Frameworks -->
+
+		<!-- XML Extensions -->
+		<li IfModActive="imranfish.xmlextensions">1.5/Frameworks/XML Extensions</li>
+		
+	</v1.5>
+	
+	<v1.6>	
+
+		<!-- Ludeon -->
+		
+		<!-- Core -->
+		
+		<li>/</li>
+		<li>1.6/Ludeon/Core</li>
+		
+		
+		
+		<!-- Frameworks -->
+
+		<!-- XML Extensions -->
+		<li IfModActive="imranfish.xmlextensions">1.6/Frameworks/XML Extensions</li>
+		
+	</v1.6>
+	
+</loadFolders>

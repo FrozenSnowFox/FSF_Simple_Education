@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+    <RecipeDef Name="FSFSimpleEducationBase" Abstract="True">
+    	<workSpeedStat>FSFSEStudySpeed</workSpeedStat>
+        <workAmount>2500</workAmount>
+        <effectWorking>Research</effectWorking>
+        <workSkillLearnFactor>1.0</workSkillLearnFactor>
+		<recipeUsers>
+			<li>FSFSEStudySpot</li>
+		</recipeUsers>
+    </RecipeDef>
+	
+    <RecipeDef ParentName="FSFSimpleEducationBase">
+        <defName>FSFSEAnimals</defName>
+        <label>study animals</label>
+        <description>study the animals skill.</description>
+        <jobString>Studying animals.</jobString>
+        <workSkill>Animals</workSkill>
+    </RecipeDef>
+	
+    <RecipeDef ParentName="FSFSimpleEducationBase">
+        <defName>FSFSEArtistic</defName>
+        <label>study artistic</label>
+        <description>study the artistic skill.</description>
+        <jobString>Studying artistic.</jobString>
+        <workSkill>Artistic</workSkill>
+    </RecipeDef>
+	
+    <RecipeDef ParentName="FSFSimpleEducationBase">
+        <defName>FSFSEConstruction</defName>
+        <label>study construction</label>
+        <description>study the construction skill.</description>
+        <jobString>Studying construction.</jobString>
+        <workSkill>Construction</workSkill>
+    </RecipeDef>
+	
+    <RecipeDef ParentName="FSFSimpleEducationBase">
+        <defName>FSFSECooking</defName>
+        <label>study cooking</label>
+        <description>study the cooking skill.</description>
+        <jobString>Studying cooking.</jobString>
+        <workSkill>Cooking</workSkill>
+    </RecipeDef>
+	
+    <RecipeDef ParentName="FSFSimpleEducationBase">
+        <defName>FSFSECrafting</defName>
+        <label>study crafting</label>
+        <description>study the crafting skill.</description>
+        <jobString>Studying crafting.</jobString>
+        <workSkill>Crafting</workSkill>
+    </RecipeDef>
+	
+    <RecipeDef ParentName="FSFSimpleEducationBase">
+        <defName>FSFSEIntellectual</defName>
+        <label>study intellectual</label>
+        <description>study the intellectual skill.</description>
+        <jobString>Studying intellectual.</jobString>
+        <workSkill>Intellectual</workSkill>
+    </RecipeDef>
+	
+    <RecipeDef ParentName="FSFSimpleEducationBase">
+        <defName>FSFSEMedical</defName>
+        <label>study medical</label>
+        <description>study the medical skill.</description>
+        <jobString>Studying medical.</jobString>
+        <workSkill>Medicine</workSkill>
+    </RecipeDef>
+	
+    <RecipeDef ParentName="FSFSimpleEducationBase">
+        <defName>FSFSEMelee</defName>
+        <label>study melee</label>
+        <description>study the melee skill.</description>
+        <jobString>Studying melee.</jobString>
+        <workSkill>Melee</workSkill>
+    </RecipeDef>
+	
+    <RecipeDef ParentName="FSFSimpleEducationBase">
+        <defName>FSFSEMining</defName>
+        <label>study mining</label>
+        <description>study the mining skill.</description>
+        <jobString>Studying mining.</jobString>
+        <workSkill>Mining</workSkill>
+    </RecipeDef>
+	
+    <RecipeDef ParentName="FSFSimpleEducationBase">
+        <defName>FSFSEPlants</defName>
+        <label>study plants</label>
+        <description>study the plants skill.</description>
+        <jobString>Studying plants.</jobString>
+        <workSkill>Plants</workSkill>
+    </RecipeDef>
+	
+    <RecipeDef ParentName="FSFSimpleEducationBase">
+        <defName>FSFSEShooting</defName>
+        <label>study shooting</label>
+        <description>study the shooting skill.</description>
+        <jobString>Studying shooting.</jobString>
+        <workSkill>Shooting</workSkill>
+    </RecipeDef>
+	
+    <RecipeDef ParentName="FSFSimpleEducationBase">
+        <defName>FSFSESocial</defName>
+        <label>study social</label>
+        <description>study the social skill.</description>
+        <jobString>Studying social.</jobString>
+        <workSkill>Social</workSkill>
+    </RecipeDef>
+
+</Defs>

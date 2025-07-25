@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+
+	<Operation Class="PatchOperationSequence">
+		<success>Normal</success>
+		<operations>
+			
+			<!-- Biotech DLC Patch Children Worktypes -->
+			
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "Human"]/race/lifeStageWorkSettings</xpath>
+				<value>
+					<FSFSEStudy>3</FSFSEStudy>
+				</value>
+			</li>
+	
+		</operations>
+	</Operation>
+	
+</Patch>
