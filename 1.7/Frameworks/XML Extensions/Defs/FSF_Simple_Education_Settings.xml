@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+	<XmlExtensions.SettingsMenuDef>
+		<defName>FrozenSnowFoxSimpleEducationSettings</defName> <!--Can be anything unique with no periods-->
+		<modId>FrozenSnowFox.SimpleEducation</modId> <!--MUST be the same as the one entered earlier-->    
+		<label>FrozenSnowFox Simple Education</label> <!-- This is what displays as your mod's name-->    
+		<settings> <!--This is where you define what settings are in the settings menu-->
+
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(187,0,0)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>For any changed settings to take effect the game must be restarted.</text>
+				<font>Medium</font>
+				<anchor>Middle</anchor>
+				<tKey>FSFSimpleEducationModWarning</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>
+			
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Simple Education Settings</text>
+				<font>Medium</font>
+				<anchor>Middle</anchor>
+				<tKey>FSFSimpleEducationSettingsTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>
+			
+			<!-- Study XP Multiplier -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Study XP Multiplier</label>
+				<key>FSFStudyXPOn</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFSimpleEducationStudyXPTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Allows you to customise the multiplier for experience gained by completing a study bill.</text>
+				<tKey>FSFSimpleEducationStudyXPOnDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.ToggleableSettings">
+				<key>FSFStudyXPOn</key>
+				<caseTrue>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Slider">
+						<key>FSFStudyXPMulti</key>
+						<defaultValue>1.0</defaultValue>
+						<min>0.1</min>
+						<max>10</max>
+						<decimals>1</decimals>
+						<label>Study Experience Multiplier {FSFStudyXPMulti}</label>
+						<tKey>FSFSimpleEducationStudyXPMulti</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Use the slider to adjust the Study Experience Multiplier.  The default value is 1.0 which awards 250XP per bill when a person has single passion in the skill.  For example setting this to 2.5 would yield 625XP per bill instead.</text>
+						<tKey>FSFSimpleEducationStudyXPDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+				</caseTrue>
+			</li>
+			
+			
+			
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>
+						
+		</settings>
+	</XmlExtensions.SettingsMenuDef>
+
+</Defs>

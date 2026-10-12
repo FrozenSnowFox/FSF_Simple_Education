@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>FSFSEStudySpot</defName>
+		<label>study spot</label>
+		<description>A place for studying new skills.</description>
+		<thingClass>Building_WorkTable</thingClass>
+		<size>(1,1)</size>
+		<graphicData>
+			<texPath>Things/Building/FSFSpotTransparentCircle</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>Transparent</shaderType>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+		<clearBuildingArea>false</clearBuildingArea>
+    	<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<passability>Standable</passability>
+		<hasInteractionCell>true</hasInteractionCell>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<surfaceType>Item</surfaceType>
+		<statBases>
+			<WorkToBuild>0</WorkToBuild>
+			<WorkTableWorkSpeedFactor>1.0</WorkTableWorkSpeedFactor>
+		</statBases>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<useHitPoints>false</useHitPoints>
+		<designationCategory>Production</designationCategory>
+		<building>
+			<artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+			<ai_chillDestination>false</ai_chillDestination>
+			<canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+			<isEdifice>false</isEdifice>
+			<sowTag>SupportPlantsOnly</sowTag>
+			<wakeDormantPawnsOnConstruction>false</wakeDormantPawnsOnConstruction>
+		</building>
+		<comps>
+			<li Class="CompProperties_ReportWorkSpeed">
+				<workSpeedStat>WorkTableWorkSpeedFactor</workSpeedStat>
+			</li>
+			<li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" Class="VEF.Buildings.CompProperties_RandomBuildingGraphic">
+				<startAsRandom>false</startAsRandom>
+				<disableRandomButton>true</disableRandomButton>
+				<randomGraphics>
+					<li>Things/Building/FSFSpotTransparentCircle</li>
+					<li>Things/Building/FSFSpotInvisible</li>
+				</randomGraphics>
+			</li>
+			<li MayRequire="maarx.assignedworkbenches" Class="CompProperties_AssignableToPawn">
+				<compClass>AssignedWorkbenches.AssignedWorkbenchesComp</compClass>
+			</li>
+		</comps>
+		<placeWorkers>
+			<li>PlaceWorker_ReportWorkSpeedPenalties</li>
+		</placeWorkers>
+		<inspectorTabs>
+			<li>ITab_Bills</li>
+		</inspectorTabs>
+	</ThingDef>
+	
+	<StatDef>
+		<defName>FSFSEStudySpeed</defName>
+		<label>studying speed</label>
+		<description>A multiplier on how fast this person can study new skills.</description>
+		<category>PawnWork</category>
+		<showDevelopmentalStageFilter>Child, Adult</showDevelopmentalStageFilter>
+		<defaultBaseValue>1.0</defaultBaseValue>
+		<minValue>0.1</minValue>
+		<toStringStyle>PercentZero</toStringStyle>
+		<statFactors>
+			<li>GlobalLearningFactor</li>
+		</statFactors>
+		<capacityFactors>
+			<li>
+				<capacity>Consciousness</capacity>
+				<weight>1</weight>
+			</li>
+		</capacityFactors>
+	</StatDef>
+	
+	<WorkTypeDef>
+		<defName>FSFSEStudy</defName>
+		<labelShort>study</labelShort>
+		<pawnLabel>Student</pawnLabel>
+		<gerundLabel>studying</gerundLabel>
+		<description>Learn new skills by studying at a study spot.</description>
+		<verb>Study</verb>
+		<naturalPriority>25</naturalPriority>
+		<alwaysStartActive>false</alwaysStartActive>
+	</WorkTypeDef>
+	
+	<WorkGiverDef>
+		<defName>FSFSEDoBillsStudySpot</defName>
+		<label>study things at study spot</label>
+		<giverClass>WorkGiver_DoBill</giverClass>
+		<workType>FSFSEStudy</workType>
+		<priorityInType>100</priorityInType>
+		<verb>study</verb>
+		<gerund>studying at</gerund>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+		<fixedBillGiverDefs>
+			<li>FSFSEStudySpot</li>
+		</fixedBillGiverDefs>
+	</WorkGiverDef>
+
+</Defs>

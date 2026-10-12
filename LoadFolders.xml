@@ -20,7 +20,7 @@
 		
 	</v1.5>
 	
-	<v1.6>	
+	<v1.6>
 
 		<!-- Ludeon -->
 		
@@ -37,5 +37,23 @@
 		<li IfModActive="imranfish.xmlextensions">1.6/Frameworks/XML Extensions</li>
 		
 	</v1.6>
+	
+	<v1.7>
+
+		<!-- Ludeon -->
+		
+		<!-- Core -->
+		
+		<li>/</li>
+		<li>1.7/Ludeon/Core</li>
+		
+		
+		
+		<!-- Frameworks -->
+
+		<!-- XML Extensions -->
+		<li IfModActive="imranfish.xmlextensions">1.7/Frameworks/XML Extensions</li>
+		
+	</v1.7>
 	
 </loadFolders>
